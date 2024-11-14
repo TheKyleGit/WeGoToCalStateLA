@@ -30,12 +30,12 @@ const Blog = () => {
         </Row>
         <hr className="hr hr-blurry" />
         <Row className="justify-content-center text-center">
-            <Col lg="4">
+            <Col lg="6">
             <h2>
                 Curious on our progress? Keep reading!
             </h2>
             <Card className="text-center mb-3">
-                <Card.Title className="pt-2"><h4>October 27, 2024</h4></Card.Title>
+                <Card.Title className="pt-2" style={{fontWeight: "bold"}}><h4 style={{fontWeight: "bold"}}>October 27, 2024</h4></Card.Title>
                 <Card.Text><p style={{fontSize: "14pt"}}>
                     We are still in the process of collecting more information.<br/>We are also working on this very website and some UI elements for our app.
                 </p></Card.Text>
