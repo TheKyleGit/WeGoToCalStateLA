@@ -25,11 +25,13 @@ const Blog = () => {
                     <Card className="text-center mt-3 pt-3">
                         <Card.Title><h3>What is WeGoTo CalStateLA?</h3></Card.Title>
                         <Card.Text>
-                            WeGoTo CalStateLA is an attempt to establish a sense of community around those in the social support circle in CalStateLA. <br/>
+                            <p>WeGoTo CalStateLA is an attempt to establish a sense of community around those in the social support circle in CalStateLA. <br/>
+                            Family members and friends of those attending CSULA are welcomed, and encouraged to join WeGoToCalStateLA<br/>
                             The goal of this app is NOT to become another social media, but to be one stop shop for all things Los Angeles. <br/>
                             It is a place to help foster positivity, support, and engagement in your community. <br/>
                             Our plan is to be able to have one app where people can host large events beach cleanup days, <br/>
-                            host small events like a hike, or to even just make sure your keeping up with your own mental health.
+                            host small events like a hike, or to even just make sure your keeping up with your own mental health.<br/></p>
+                            <h5>If interested, please take a look at some helpful <a href="/resources">resources</a>!</h5>
                         </Card.Text>
                         <hr className="hr hr-blurry" />
                         <Card.Title><h3>Want to help?</h3></Card.Title>

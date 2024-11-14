@@ -11,8 +11,8 @@ const Resources = () => {
         <>
         <div className="mx-3 my-5">
             <h1 className="text-center">
-                While you wait for us to deliver our app,
-                here are some resources you may be interested in.
+                While you wait for us to deliver our app,<br/>
+                here are some resources you may be interested in!
             </h1>
             <hr className="hr hr-blurry" />
             <Row className="justify-content-md-center">
