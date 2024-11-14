@@ -1,8 +1,21 @@
-
 :root {
-    font-family: Inter, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
 }
 @supports (font-variation-settings: normal) {
-:root { font-family: InterVariable, sans-serif; }
+:root { 
+    font-family: Arial, Helvetica, sans-serif; 
+    
+}
+}
+div {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color:rgba(219, 203, 179, 0.26);
+}
+Nav {
+    font-size: 15pt;
+    font-weight: bold;
 }
