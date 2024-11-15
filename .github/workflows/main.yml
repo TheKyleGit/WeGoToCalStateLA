@@ -39,8 +39,12 @@ jobs:
         run: |
           RESPONSE=$(curl "https://api.cloudflare.com/client/v4/accounts/${ACCOUNT_IDENTIFIER}/pages/projects" -H "Content-Type: application/json" -H "X-Auth-Key: ${CF_API_TOKEN}" -H "X-Auth-Email: ${CF_EMAIL}")
           
+          # Check if the structure matches and extracts correctly
           AWARDTRAVEL_DATA=$(echo "$RESPONSE" | jq -r '.result[] | select(.name == "wegotocalstatela") | { name: .name, url: .latest_deployment.url }')
           
+          # Print the extracted data
+          echo "Extracted Data: $AWARDTRAVEL_DATA"
+
           # Check if the data for "awardtravel" is not null
           if [[ -n "$AWARDTRAVEL_DATA" ]]; then
             # Set the "name" and "url" as environment variables
