@@ -4,12 +4,16 @@ on:
   push:
     branches:
       - '*'
+    paths-ignore:
+      - '.github/**'
   pull_request:
     types: [opened, synchronize, closed]
+    paths-ignore:
+      - '.github/**'
   create:
     branches:
       - '*'
-
+      
 jobs:
   notify:
     runs-on: ubuntu-latest
