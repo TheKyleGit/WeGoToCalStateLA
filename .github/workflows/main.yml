@@ -58,7 +58,7 @@ jobs:
           elif [[ "${{ github.event_name }}" == "create" ]]; then
             DESCRIPTION="Action: New Branch Created\nBranch: $BRANCH_NAME\nBranch Author: $BRANCH_AUTHOR\nDeployment URL: $CF_AWARDTRAVEL_URL"
           else
-            DESCRIPTION="Commit Message: $COMMIT_MESSAGE\nCommit Author: $COMMIT_AUTHOR\nCommit Hash: $COMMIT_HASH\nCommit Timestamp: $COMMIT_TIMESTAMP\nDeployment URL: $CF_AWARDTRAVEL_URL\n---------"
+            DESCRIPTION="Commit Message: $COMMIT_MESSAGE\nCommit Author: $COMMIT_AUTHOR\nCommit Hash: $COMMIT_HASH\nCommit Timestamp: $COMMIT_TIMESTAMP\nDeployment URL: $CF_AWARDTRAVEL_URL"
           fi
 
           # Send the notification to Slack
