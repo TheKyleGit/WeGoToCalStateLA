@@ -52,13 +52,13 @@ jobs:
           fi
           
           if [[ "${{ github.event_name }}" == "push" ]]; then
-            DESCRIPTION="Action: Push\nBranch: $BRANCH_NAME\nCommit Message: $COMMIT_MESSAGE\nCommit Author: $COMMIT_AUTHOR\nCommit Hash: $COMMIT_HASH\nCommit Timestamp: $COMMIT_TIMESTAMP\nDeployment URL: $CF_AWARDTRAVEL_URL"
+            DESCRIPTION="---------\nAction: Push\nBranch: $BRANCH_NAME\nCommit Message: $COMMIT_MESSAGE\nCommit Author: $COMMIT_AUTHOR\nCommit Hash: $COMMIT_HASH\nCommit Timestamp: $COMMIT_TIMESTAMP\nDeployment URL: $CF_AWARDTRAVEL_URL"
           elif [[ "${{ github.event_name }}" == "pull_request" ]]; then
             DESCRIPTION="Action: $PULL_REQUEST_ACTION\nPull Request $PULL_REQUEST_NUMBER - $PULL_REQUEST_TITLE\nPull Request Author: $PULL_REQUEST_AUTHOR\nSource Branch: $PULL_REQUEST_SOURCE_BRANCH\nTarget Branch: $PULL_REQUEST_TARGET_BRANCH\nPull Request URL: ${{ github.event.pull_request.html_url }}\nDeployment URL: $CF_AWARDTRAVEL_URL"
           elif [[ "${{ github.event_name }}" == "create" ]]; then
             DESCRIPTION="Action: New Branch Created\nBranch: $BRANCH_NAME\nBranch Author: $BRANCH_AUTHOR\nDeployment URL: $CF_AWARDTRAVEL_URL"
           else
-            DESCRIPTION="Commit Message: $COMMIT_MESSAGE\nCommit Author: $COMMIT_AUTHOR\nCommit Hash: $COMMIT_HASH\nCommit Timestamp: $COMMIT_TIMESTAMP\nDeployment URL: $CF_AWARDTRAVEL_URL"
+            DESCRIPTION="Commit Message: $COMMIT_MESSAGE\nCommit Author: $COMMIT_AUTHOR\nCommit Hash: $COMMIT_HASH\nCommit Timestamp: $COMMIT_TIMESTAMP\nDeployment URL: $CF_AWARDTRAVEL_URL\n---------"
           fi
 
           # Send the notification to Slack
