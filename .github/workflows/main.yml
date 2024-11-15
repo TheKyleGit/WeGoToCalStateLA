@@ -42,9 +42,6 @@ jobs:
           # Check if the structure matches and extracts correctly
           AWARDTRAVEL_DATA=$(echo "$RESPONSE" | jq -r '.result[] | select(.name == "wegotocalstatela") | { name: .name, url: .latest_deployment.url }')
           
-          # Print the extracted data
-          echo "Extracted Data: $AWARDTRAVEL_DATA"
-
           # Check if the data for "awardtravel" is not null
           if [[ -n "$AWARDTRAVEL_DATA" ]]; then
             CF_AWARDTRAVEL_NAME=$(echo "$AWARDTRAVEL_DATA" | jq -r '.name')
@@ -67,6 +64,3 @@ jobs:
           # Send the notification to Slack
           echo "Sending payload to Slack..."
           curl -X POST -H "Content-Type: application/json" --data '{"text": "'"$DESCRIPTION"'"}' $SLACK_WEBHOOK_URL
-
-          # Print the payload for debugging
-          echo "Payload: {\"text\": \"$DESCRIPTION\"}"
