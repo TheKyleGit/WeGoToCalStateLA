@@ -61,7 +61,7 @@ jobs:
           else
             DESCRIPTION="Commit Message: $COMMIT_MESSAGE\nCommit Author: $COMMIT_AUTHOR\nCommit Hash: $COMMIT_HASH\nCommit Timestamp: $COMMIT_TIMESTAMP\nDeployment URL: $CF_AWARDTRAVEL_URL"
           fi
-
+          echo "API Response: $RESPONSE"
           curl -X POST -H "Content-Type: application/json" -d '{
             "embeds": [{
               "title": "Activity Information",
