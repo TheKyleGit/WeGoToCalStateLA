@@ -30,7 +30,7 @@ const MainNav = () => {
                         <Nav.Link href="/" className="justify-content-center align-items-center">
                             Home
                         </Nav.Link>
-                        <Nav.Link href="#about" className="justify-content-center align-items-center">
+                        <Nav.Link href="/aboutus" className="justify-content-center align-items-center">
                             About Us
                         </Nav.Link>
                         <Nav.Link href="/resources" className="justify-content-center align-items-center">
