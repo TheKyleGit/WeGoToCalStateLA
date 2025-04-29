@@ -69,7 +69,7 @@ const ProjectRoadmap = () => {
     {
       stage: 1,
       color: '#4682B4',
-      title: '1. Initial Concept and Research',
+      title: '1. Initial Concept and Investigation',
       content: [
         'Conduct surveys, interviews, and focus groups with target users to understand their needs.',
         'Decide which features to include based on what people want.',

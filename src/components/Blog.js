@@ -55,8 +55,7 @@ const Blog = () => {
                     <Container className="text-center">
                     </Container>
                     <Card className="text-center mb-3">
-<<<<<<< Updated upstream
-=======
+
                         <Card.Title className="pt-2"><h4>April 22, 2025</h4></Card.Title>
                         <Card.Text><p style={{ fontSize: "14pt" }}>
                             Updated UI and added more features including chatbot, quizzes, and more!
@@ -87,13 +86,14 @@ const Blog = () => {
                         </div>
                     </Card>
                     <Card className="text-center mb-3">
+
                         <Card.Title className="pt-2"><h4>November 22, 2024</h4></Card.Title>
                         <Card.Text><p style={{ fontSize: "14pt" }}>
                             Added resources page, added About us page, and some UI refinements.
                         </p></Card.Text>
                     </Card>
                     <Card className="text-center mb-3">
->>>>>>> Stashed changes
+
                         <Card.Title className="pt-2"><h4>October 27, 2024</h4></Card.Title>
                         <Card.Text><p style={{ fontSize: "14pt" }}>
                             We are still in the process of collecting more information.<br />We are also working on this very website and some UI elements for our app.
