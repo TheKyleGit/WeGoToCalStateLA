@@ -18,7 +18,7 @@ const styles = {
   },
   stagesContainer: {
     display: 'flex',
-    gap: '4px',
+    gap: '14px',
     marginBottom: '32px',
   },
   stageBar: {
@@ -63,7 +63,7 @@ const styles = {
 };
 
 const ProjectRoadmap = () => {
-  const [activeStage, setActiveStage] = useState(1);
+  const [activeStage, setActiveStage] = useState(2);
 
   const stages = [
     {
@@ -111,20 +111,29 @@ const ProjectRoadmap = () => {
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>PC & CSULA Senior Project Roadmap 2025</h1>
-      
+
       <div style={styles.stagesContainer}>
-        {stages.map((stage) => (
-          <div 
-            key={stage.stage}
-            onClick={() => setActiveStage(stage.stage)}
-            style={{
-              ...styles.stageBar,
-              backgroundColor: stage.color,
-            }}
-          >
-            {stage.title}
-          </div>
-        ))}
+        {stages.map((stage) => {
+          const isActive = activeStage === stage.stage;
+          return (
+            <div
+              key={stage.stage}
+              onClick={() => setActiveStage(stage.stage)}
+              style={{
+                ...styles.stageBar,
+                backgroundColor: stage.color,
+                border: isActive ? '3px solid black' : 'none',
+                transform: isActive ? 'scale(1.1)' : 'scale(1)',
+                boxShadow: isActive ? '0px 4px 8px rgba(0, 0, 0, 0.2)' : 'none',
+                fontWeight: isActive ? 'bold' : 'normal',
+                color: isActive ? '#fff' : 'rgba(255,255,255,0.8)',
+                transition: 'all 0.3s ease-in-out',
+              }}
+            >
+              {stage.title}
+            </div>
+          );
+        })}
       </div>
 
       <div style={styles.content}>
