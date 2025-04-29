@@ -5,6 +5,8 @@ import { Container } from 'react-bootstrap';
 import Navbar from "./components/MainNav";
 import Blog from "./components/Blog";
 import Resources from "./components/Resources";
+import AboutUs from "./components/AboutUs";
+import Presentation from "./components/Presentation";
 import {
   BrowserRouter as Router,
   Routes,
@@ -19,6 +21,8 @@ function App() {
         <Route exact path="/" element={<Blog />} />
         <Route path="/WeGoToCalStateLA" element={<Blog />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/presentation" element={<Presentation />} />
       </Routes>
     </Router>
   );
