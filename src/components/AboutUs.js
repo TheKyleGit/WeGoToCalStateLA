@@ -188,7 +188,7 @@ const AboutUs = () => {
                                 <hr className="hr hr-blurry" />
                                 <Card.Text className="text-center"><p>
 
-                                Ueiral has been an incredible source of knowledge, serving as our resident expert in machine learning and AI. 
+                                Uriel has been an incredible source of knowledge, serving as our resident expert in machine learning and AI. 
                                 She played a key role in formulating and building the chatbot, bringing it to life with her technical expertise and innovative thinking.
 
                                 </p></Card.Text>
